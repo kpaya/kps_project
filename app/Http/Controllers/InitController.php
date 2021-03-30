@@ -18,8 +18,6 @@ class InitController extends Controller
 
         $dados = json_decode($response);
 
-        // dd(json_decode($response));
-
         return view('welcome', compact('dados'));
     }
 

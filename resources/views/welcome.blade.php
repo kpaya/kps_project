@@ -12,8 +12,8 @@
 			  crossorigin="anonymous"></script>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
-        <script src="{{asset('js/bootstrap.js')}}"></script>
+        <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+        <script src="{{asset('js/bootstrap.min.js')}}"></script>
 
         <script type="text/javascript" src="{{asset('slick/slick.min.js')}}"></script>
         <link rel="stylesheet" type="text/css" href="{{asset('slick/slick.css')}}"/>
@@ -28,28 +28,21 @@
                 min-height:100%;
             }
 
-            .format {
-            background-repeat: no-repeat;
-            align-items: center;
-            border-radius: 16px;
-            color: #fff;
-            /* font-size: 1.25rem; */
-            /* font-weight: 900; */
-            display: flex;
-            height: 100%;
-            justify-content: center;
-            text-shadow: 0 2px 3px hsla(0deg, 0%, 0%, 0.25);
+            body {
+                color: #fff;
+                background-repeat: no-repeat;
+                background-image: linear-gradient(#ff8a00, #e52e71);
             }
 
-            .linear {
-            background-image: linear-gradient(#ff8a00, #e52e71);
+            .tex{
+                text-shadow: 0 2px 3px hsla(0deg, 0%, 0%, 0.25);
             }
         </style>
 
     </head>
     <body class="format linear">
 
-        <div class="container">
+        <div class="container align-middle">
 
             <div class="row">
                 <div class="col text-center h1">LOREM IPSUM</div>
@@ -59,16 +52,52 @@
                 <div class="col text-center h2 fw-light">DOLOR SIT AME</div>
             </div>
 
-            <div class="row-sm-2 bg-white rounded text-center text-dark">
-                <div class="responsive">
+            <div class="row bg-white rounded text-center text-dark">
+                {{-- <div class="row text-center py-2"><div class="col fw-bold fs-3">Eletrônicos</div></div> --}}
+                <div class="carousel px-4 pt-3">
                     @foreach ($dados as $dado)
-                        <div class="container p-3">
-                            <img class="rounded mx-auto d-block w-50" src="{{$dado->imagem}}" alt="dotnet" />
-                            <p class="text-start">{{$dado->category}}</p>
-                            <p>{{$dado->title}}</p>
-                        </div>
+                        @if ($dado->category == 'Eletronicos')
+                            <div class="container px-3 pt-3">
+                                <img class="rounded mx-auto d-block w-100" src="{{$dado->imagem}}" alt="{{$dado->title}}" />
+                                <p class="text-start fw-bold fs-4">{{$dado->category}}</p>
+                                <p class="text-start fs-5">{{$dado->title}}</p>
+                                <p class="text-start fs-6 tex">{{$dado->body}}</p>
+                            </div>
+                        @endif
                     @endforeach
-                  </div>
+                </div>
+            </div>
+
+            <div class="row bg-white rounded text-center text-dark mt-3">
+                {{-- <div class="row text-center py-2"><div class="col fw-bold fs-3">Esportes</div></div> --}}
+                <div class="carousel px-4 pt-3">
+                    @foreach ($dados as $dado)
+                        @if ($dado->category == 'Esportes')
+                            <div class="container px-3 pt-3">
+                                <img class="rounded mx-auto d-block w-100" src="{{$dado->imagem}}" alt="dotnet" />
+                                <p class="text-start fw-bold fs-4">{{$dado->category}}</p>
+                                <p class="text-start fs-5">{{$dado->title}}</p>
+                                <p class="text-start fs-6 tex">{{$dado->body}}</p>
+                            </div>
+                        @endif
+                    @endforeach
+                </div>
+            </div>
+
+            <div class="row bg-white rounded text-center text-dark my-3">
+                {{-- <div class="row text-center py-2"><div class="col fw-bold fs-3">Moda</div></div> --}}
+                <div class="carousel px-4 pt-3">
+                    @foreach ($dados as $dado)
+                        @if ($dado->category == 'Moda')
+                            <div class="container px-3 pt-3">
+                                <img class="rounded mx-auto d-block w-100" src="{{$dado->imagem}}" alt="dotnet" />
+                                <p class="text-start fw-bold fs-4">{{$dado->category}}</p>
+                                <p class="text-start fs-5">{{$dado->title}}</p>
+                                <p class="text-start fs-6 tex">{{$dado->body}}</p>
+                            </div>
+                        @endif
+                    @endforeach
+                </div>
             </div>
 
         </div>
@@ -77,12 +106,12 @@
 
 
         <script>
-            $('.responsive').slick({
+            $('.carousel').slick({
                 dots: true,
                 infinite: false,
                 speed: 600,
                 slidesToShow: 3,
-                slidesToScroll: 1,
+                slidesToScroll: 3,
                 responsive: [
                     {
                     breakpoint: 1024,
