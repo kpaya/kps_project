@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>PWA - Est</title>
 
         <script
 			  src="https://code.jquery.com/jquery-3.6.0.js"
@@ -56,7 +56,7 @@
                 {{-- <div class="row text-center py-2"><div class="col fw-bold fs-3">Eletrônicos</div></div> --}}
                 <div class="carousel px-4 pt-3">
                     @foreach ($dados as $dado)
-                        @if ($dado->category == 'Eletronicos')
+                        @if ($dado->category == 'Eletronicos' && $dado->imagem != 24)
                             <div class="container px-3 pt-3">
                                 <img class="rounded mx-auto d-block w-100" src="{{$dado->imagem}}" alt="{{$dado->title}}" />
                                 <p class="text-start fw-bold fs-4">{{$dado->category}}</p>
