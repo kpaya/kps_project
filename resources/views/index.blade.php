@@ -9,16 +9,16 @@
         <script
 			  src="https://code.jquery.com/jquery-3.6.0.js"
 			  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-			  crossorigin="anonymous"></script>
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
-        <script src="{{asset('js/bootstrap.min.js')}}"></script>
+			  crossorigin="anonymous">
+        </script>
 
-        <script type="text/javascript" src="{{asset('slick/slick.min.js')}}"></script>
-        <link rel="stylesheet" type="text/css" href="{{asset('slick/slick.css')}}"/>
-        <link rel="stylesheet" type="text/css" href="{{asset('slick/slick-theme.css')}}"/>
-        {{-- <script src="{{asset('js/slick.js')}}"></script> --}}
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href='css/bootstrap.min.css'>
+        <script src='js/bootstrap.min.js'></script>
+
+        <script type="text/javascript" src='slick/slick.min.js'></script>
+        <link rel="stylesheet" type="text/css" href='slick/slick.css'/>
+        <link rel="stylesheet" type="text/css" href='slick/slick-theme.css'/>
 
 
         <!-- Styles -->
