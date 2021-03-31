@@ -49,7 +49,7 @@
             </div>
 
             <div class="row">
-                <div class="col text-center h2 fw-light">DOLOR SIT AME</div>
+                <div class="col text-center h2 fw-light">DOLOR SIT AMET</div>
             </div>
 
             <div class="row bg-white rounded text-center text-dark">
