@@ -37,6 +37,12 @@
             .tex{
                 text-shadow: 0 2px 3px hsla(0deg, 0%, 0%, 0.25);
             }
+
+            .sha{
+                -webkit-box-shadow: 7px 7px 10px 0px rgba(113, 23, 23, 1);
+                -moz-box-shadow:    7px 7px 10px 0px rgba(113, 23, 23, 1);
+                box-shadow:         7px 7px 10px 0px rgba(113, 23, 23, 1);
+            }
         </style>
 
     </head>
@@ -52,7 +58,7 @@
                 <div class="col text-center h2 fw-light">DOLOR SIT AMET</div>
             </div>
 
-            <div class="row-sm bg-white rounded-3 text-center text-dark">
+            <div class="sha row-sm bg-white rounded-3 text-center text-dark">
                 {{-- <div class="row-sm text-center py-2"><div class="col fw-bold fs-3">Eletrônicos</div></div> --}}
                 <div class="col-sm carousel px-4 pt-3">
                     @foreach ($dados as $dado)
@@ -68,7 +74,7 @@
                 </div>
             </div>
 
-            <div class="row-sm bg-white rounded-3 text-center text-dark mt-3">
+            <div class="sha row-sm bg-white rounded-3 text-center text-dark mt-3">
                 {{-- <div class="row-sm text-center py-2"><div class="col fw-bold fs-3">Esportes</div></div> --}}
                 <div class="carousel px-4 pt-3">
                     @foreach ($dados as $dado)
@@ -84,7 +90,7 @@
                 </div>
             </div>
 
-            <div class="row-sm bg-white rounded-3 text-center text-dark my-3">
+            <div class="sha row-sm bg-white rounded-3 text-center text-dark my-3">
                 {{-- <div class="row-sm text-center py-2"><div class="col fw-bold fs-3">Moda</div></div> --}}
                 <div class="carousel px-4 pt-3">
                     @foreach ($dados as $dado)
@@ -108,7 +114,6 @@
         <script>
             $('.carousel').slick({
                 dots: true,
-                infinite: false,
                 speed: 600,
                 slidesToShow: 3,
                 slidesToScroll: 3,
