@@ -3,7 +3,7 @@
 Projeto construído em Laravel e Boostrap, realizando a consulta das imagens via API.
 
 <p align="center">
-<img src="image2-p.gif" alt="animated" />
+<img src="image-p.gif" alt="animated" />
 </p>
 
 ### Link de Acesso: [Lorem Front](https://pwaestag.herokuapp.com/)
